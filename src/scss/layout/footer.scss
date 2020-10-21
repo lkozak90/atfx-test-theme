@@ -1,0 +1,6 @@
+/*! footer.scss */
+.footer-container {
+  .row-fluid [class*="span"] {
+    min-height: 0;
+  }
+}
