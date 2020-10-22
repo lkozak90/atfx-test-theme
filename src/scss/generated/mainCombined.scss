@@ -2933,76 +2933,6 @@ $val: 0;
   }
 }
 
-.flex-mb {
-  @for $i from 0 through 40 {
-    $val: $i * 5;
-
-    &--#{$val} {
-      >span {
-        >div {
-          margin-bottom: rem($val);
-        }
-      }
-    }
-  }
-
-  @media (min-width: 576px) {
-    @for $i from 0 through 40 {
-      $val: $i * 5;
-
-      &--sm-#{$val} {
-        >span {
-          >div {
-            margin-bottom: rem($val);
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    @for $i from 0 through 40 {
-      $val: $i * 5;
-
-      &--md-#{$val} {
-        >span {
-          >div {
-            margin-bottom: rem($val);
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 992px) {
-    @for $i from 0 through 40 {
-      $val: $i * 5;
-
-      &--lg-#{$val} {
-        >span {
-          >div {
-            margin-bottom: rem($val);
-          }
-        }
-      }
-    }
-  }
-
-  @media (min-width: 1200px) {
-    @for $i from 0 through 40 {
-      $val: $i * 5;
-
-      &--xl-#{$val} {
-        >span {
-          >div {
-            margin-bottom: rem($val);
-          }
-        }
-      }
-    }
-  }
-}
-
 /*! ===============  LAYOUT  =============== */
 /*! header.scss */
 .header-container {
@@ -4004,6 +3934,15 @@ $gutterWidth   : 20;
 // HS grid for Drag & Drop
 .dnd-section[class*=max-width] {
 
+  .container, .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
   [class*=span] {
     padding-right: #{$gutterWidth}px;
     padding-left : #{$gutterWidth}px;
@@ -4039,6 +3978,7 @@ $gutterWidth   : 20;
     }
   }
 }
+
 
 [class*=span] {
   width     : 100%;
